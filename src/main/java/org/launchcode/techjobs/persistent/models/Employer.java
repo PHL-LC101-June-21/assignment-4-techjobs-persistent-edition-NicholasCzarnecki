@@ -1,6 +1,19 @@
 package org.launchcode.techjobs.persistent.models;
 
-public class Employer extends AbstractEntity {
+import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
+@Entity
+public class Employer extends AbstractEntity {
+    @NotBlank(message = "This field is required")
+    @Size(max = 255)
+    String location;
+
+    public String getLocation() {
+        return location;
+    }
+
+    public Employer() {}
 
 }
