@@ -24,5 +24,6 @@ public class Skill extends AbstractEntity {
         this.description = description;
     }
 
-    public Skill() {}
+    public Skill() {
+    }
 }
